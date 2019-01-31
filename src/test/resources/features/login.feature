@@ -4,6 +4,7 @@
       Given the user goes to url
       When the user cliks on BriteErpDemo button
       Then the title should be Login | Website localhost
+      And the database should be BriteErpDemo
 
 
         @manager @smoke
