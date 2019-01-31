@@ -11,6 +11,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
     private Driver() {}
 
@@ -57,6 +59,7 @@ public class Driver {
                     break;
             }
         }
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         return driver;
     }
 
