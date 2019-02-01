@@ -18,7 +18,7 @@ public class LoginStepDefs {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
-    @When("the user cliks on BriteErpDemo button")
+    @When("the user clicks on BriteErpDemo button")
     public void the_user_cliks_on_BriteErpDemo_button() {
         EntryPage entryPage = new EntryPage();
         entryPage.brietErpDemoAnchor.click();
@@ -40,24 +40,27 @@ public class LoginStepDefs {
     @When("the manager enters valid email address")
     public void the_manager_enters_valid_email_address() {
         SigInPage sigInPage = new SigInPage();
-
+        sigInPage.usernameInput.sendKeys(ConfigReader.getProperty("manager-username"));
+        sigInPage = null;
     }
 
     @When("the manager enters valid password")
     public void the_manager_enters_valid_password() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        SigInPage sigInPage = new SigInPage();
+        sigInPage.passwordInput.sendKeys(ConfigReader.getProperty("manager-password"));
+        sigInPage = null;
     }
 
     @When("the manager clicks Log in button")
     public void the_manager_clicks_Log_in_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        SigInPage sigInPage = new SigInPage();
+        sigInPage.loginButton.click();
+        sigInPage = null;
     }
 
-    @Then("the title should be #Inbox - Odoo")
+    @Then("the title should be Odoo")
     public void the_title_should_be_Inbox_Odoo() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        assertEquals("Odoo",
+                Driver.getDriver().getTitle());
     }
 }
