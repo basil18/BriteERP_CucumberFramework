@@ -1,6 +1,12 @@
-# Target folder
-target
+# Unnecessary folders
 bin
+
+# Include the target directory but
+# Exclude index.html (Cukes report) from ignore list
+target/*
+!target/default-cucumber-reports
+target/default-cucumber-reports/*
+!target/default-cucumber-reports/index.html
 
 # Mac users
 *.DS_Store
