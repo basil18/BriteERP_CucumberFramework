@@ -72,6 +72,12 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    //TODO
+    public static boolean isElementsTextAMatch(WebElement element, String expected, int seconds) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
+        return wait.until(ExpectedConditions.textToBePresentInElement(element, expected));
+    }
+
     /**
      * Explicit Wait for Clickability, simplified
      * @param element           WebElement requested to be clickable

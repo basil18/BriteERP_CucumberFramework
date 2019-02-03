@@ -1,5 +1,6 @@
 @smoke @regression @login
   Feature: Login tests
+
     Background: user / manager should go to home page
       Given the user goes to url
       When the user clicks on BriteErpDemo button
@@ -89,3 +90,7 @@
          And the user doesn't enter a password
          And the user clicks Log in button
         Then the title should be Login | Website localhost
+
+## TODO
+  # add more positive scenarios to not only verify the title
+  # but also verify the logged in user's credentials to be on the page
