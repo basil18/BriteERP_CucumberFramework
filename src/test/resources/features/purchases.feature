@@ -6,4 +6,3 @@
       Then the title should be Odoo
       When the Purchases button is clicked
       Then the title should be Requests for Quotation - Odoo
-

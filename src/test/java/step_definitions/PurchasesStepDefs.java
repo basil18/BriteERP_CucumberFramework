@@ -3,10 +3,12 @@ package step_definitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.NoSuchContextException;
 import pages.EntryPage;
-import pages.MainTopNagivationPage;
 import pages.SigInPage;
+import pages.TopNavigationPage;
+import utilities.BrowserUtils;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -35,13 +37,18 @@ public class PurchasesStepDefs {
 
     @When("the Purchases button is clicked")
     public void the_Purchases_button_is_clicked() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        TopNavigationPage navPage = new TopNavigationPage();
+
+        navPage.purchasesAnchor.click();
+
+        navPage = null;
     }
 
+    //TODO need to replace WAIT method with Explicit Wait method in BrowserUtils
     @Then("the title should be Requests for Quotation - Odoo")
     public void the_title_should_be_Requests_for_Quotation_Odoo() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        BrowserUtils.wait(6);
+        Assert.assertEquals("Requests for Quotation - Odoo",
+                Driver.getDriver().getTitle());
     }
 }
