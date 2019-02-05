@@ -1,4 +1,4 @@
-@smoke @regression @login
+@regression @login
   Feature: Login tests
 
     Background: user / manager should go to home page
@@ -7,7 +7,7 @@
       Then the title should be Login | Website localhost
        And the database should be BriteErpDemo
 
-        @manager
+        @smoke @manager
       Scenario: Manager: Positive login test
         When the manager enters valid email address
          And the manager enters valid password
@@ -49,7 +49,7 @@
          And the manager clicks Log in button
         Then the title should be Login | Website localhost
 
-        @user
+        @smoke @user
       Scenario: User: Positive login test
         When the user enters valid email address
          And the user enters valid password

@@ -15,7 +15,8 @@ import org.junit.runner.RunWith;
         },
         tags = {
 //                {"@purchases", "@manager"},
-                "@todo"
+                "@smoke"
+//                "@to-do"
                 },
         features = {"src/test/resources/features"},
         glue = {"step_definitions"}
