@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.NoSuchContextException;
 import pages.EntryPage;
 import pages.SigInPage;
+import pages.SubHeaderNavigationPage;
 import pages.TopNavigationPage;
 import utilities.BrowserUtils;
 import utilities.ConfigReader;
@@ -44,11 +45,15 @@ public class PurchasesStepDefs {
         navPage = null;
     }
 
-    //TODO need to replace WAIT method with Explicit Wait method in BrowserUtils
     @Then("the title should be Requests for Quotation - Odoo")
     public void the_title_should_be_Requests_for_Quotation_Odoo() {
-        BrowserUtils.wait(6);
+        SubHeaderNavigationPage subBar = new SubHeaderNavigationPage();
+
+        BrowserUtils.isElementsTextAMatch(
+                subBar.activePageNameLabel, "Requests for Quotation", 10);
         Assert.assertEquals("Requests for Quotation - Odoo",
                 Driver.getDriver().getTitle());
+
+        subBar = null;
     }
 }
