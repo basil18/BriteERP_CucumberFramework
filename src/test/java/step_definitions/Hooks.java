@@ -17,7 +17,7 @@ public class Hooks {
                     .getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
 //        }
-        BrowserUtils.wait(5);
+        BrowserUtils.wait(3);
         Driver.closeDriver();
     }
 }

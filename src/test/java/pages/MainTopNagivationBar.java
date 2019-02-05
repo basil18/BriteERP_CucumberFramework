@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class MainTopNagivationPage {
-    public MainTopNagivationPage() {
+public class MainTopNagivationBar {
+    public MainTopNagivationBar() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

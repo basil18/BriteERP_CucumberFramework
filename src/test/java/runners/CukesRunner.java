@@ -13,7 +13,10 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "junit:target/cucumber.xml"
         },
-        tags = "@todo",
+        tags = {
+//                {"@purchases", "@manager"},
+                "@todo"
+                },
         features = {"src/test/resources/features"},
         glue = {"step_definitions"}
 )

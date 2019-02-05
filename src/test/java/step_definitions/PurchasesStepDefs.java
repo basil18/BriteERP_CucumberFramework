@@ -5,10 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.NoSuchContextException;
-import pages.EntryPage;
-import pages.SigInPage;
-import pages.SubHeaderNavigationPage;
-import pages.TopNavigationPage;
+import pages.*;
 import utilities.BrowserUtils;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -38,7 +35,7 @@ public class PurchasesStepDefs {
 
     @When("the Purchases button is clicked")
     public void the_Purchases_button_is_clicked() {
-        TopNavigationPage navPage = new TopNavigationPage();
+        TopNavigationBar navPage = new TopNavigationBar();
 
         navPage.purchasesAnchor.click();
 
@@ -47,13 +44,50 @@ public class PurchasesStepDefs {
 
     @Then("the title should be Requests for Quotation - Odoo")
     public void the_title_should_be_Requests_for_Quotation_Odoo() {
-        SubHeaderNavigationPage subBar = new SubHeaderNavigationPage();
+        PurchasesPage page = new PurchasesPage();
 
-        BrowserUtils.isElementsTextAMatch(
-                subBar.activePageNameLabel, "Requests for Quotation", 10);
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Requests for Quotation",
+                10);
+
         Assert.assertEquals("Requests for Quotation - Odoo",
                 Driver.getDriver().getTitle());
 
-        subBar = null;
+        page = null;
+    }
+
+    @When("the Purchase Orders button is clicked")
+    public void the_Purchase_Orders_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.purchaseOrdersAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the title should be Purchase Orders - Odoo")
+    public void the_title_should_be_Purchase_Orders_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Purchase Orders",
+                10);
+
+        Assert.assertEquals("Purchase Orders - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
+
+    @Then("the user should be on Purchase Orders page")
+    public void the_user_should_be_on_Purchase_Orders_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Purchase Orders",
+                10));
+
+        page = null;
     }
 }
