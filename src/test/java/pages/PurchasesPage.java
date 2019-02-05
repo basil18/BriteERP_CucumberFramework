@@ -71,7 +71,7 @@ public class PurchasesPage {
         @FindBy (css = "a[data-menu='516']")
         public WebElement productsAnchor;
 
-        @FindBy (linkText = "Incoming  Products")
+        @FindBy (linkText = "Incoming Products")
         public WebElement incomingProductsAnchor;
 
         @FindBy (linkText = "Vendor Bills")

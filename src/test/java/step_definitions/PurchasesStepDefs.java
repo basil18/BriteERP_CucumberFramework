@@ -90,4 +90,179 @@ public class PurchasesStepDefs {
 
         page = null;
     }
+
+    @When("the Vendors button is clicked")
+    public void the_Vendors_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.vendorsAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the user should be on Vendors page")
+    public void the_user_should_be_on_Vendors_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                        "Vendors",
+                        10));
+
+        page = null;
+    }
+
+    @Then("the title should be Vendors - Odoo")
+    public void the_title_should_be_Vendors_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Vendors",
+                10);
+
+        Assert.assertEquals("Vendors - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
+
+    @When("the Products button is clicked")
+    public void the_Products_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.productsAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the user should be on Products page")
+    public void the_user_should_be_on_Products_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                        "Products",
+                        10));
+
+        page = null;
+    }
+
+    @Then("the title should be Products - Odoo")
+    public void the_title_should_be_Products_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Products",
+                10);
+
+        Assert.assertEquals("Products - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
+
+    @When("the Incoming Products button is clicked")
+    public void the_Incoming_Products_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.incomingProductsAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the user should be on Incoming Products page")
+    public void the_user_should_be_on_Incoming_Products_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                        "Incoming Products",
+                        10));
+
+        page = null;
+    }
+
+    @Then("the title should be Incoming Products - Odoo")
+    public void the_title_should_be_Incoming_Products_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Incoming Products",
+                10);
+
+        Assert.assertEquals("Incoming Products - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
+
+    @When("the Vendor Bills button is clicked")
+    public void the_Vendor_Bills_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.vendorBillsAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the user should be on Vendor Bills page")
+    public void the_user_should_be_on_Vendor_Bills_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                        "Vendor Bills",
+                        10));
+
+        page = null;
+    }
+
+    @Then("the title should be Vendor Bills - Odoo")
+    public void the_title_should_be_Vendor_Bills_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Vendor Bills",
+                10);
+
+        Assert.assertEquals("Vendor Bills - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
+
+    @When("the Reporting button is clicked")
+    public void the_Reporting_button_is_clicked() {
+        PurchasesPage page = new PurchasesPage();
+
+        page.reportingAnchor.click();
+
+        page = null;
+    }
+
+    @Then("the user should be on Purchase Analysis page")
+    public void the_user_should_be_on_Purchase_Analysis_page() {
+        PurchasesPage page = new PurchasesPage();
+
+        Assert.assertTrue(
+                BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                        "Purchase Analysis",
+                        10));
+
+        page = null;
+    }
+
+    @Then("the title should be Purchase Analysis - Odoo")
+    public void the_title_should_be_Purchase_Analysis_Odoo() {
+        PurchasesPage page = new PurchasesPage();
+
+        BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
+                "Purchase Analysis",
+                10);
+
+        Assert.assertEquals("Purchase Analysis - Odoo",
+                Driver.getDriver().getTitle());
+
+        page = null;
+    }
 }
