@@ -1,5 +1,5 @@
 @smoke @regression @purchases @user
-  Feature: Purchases, verification of modules and basic functionality
+  Feature: User: Purchases, verification of modules and basic functionality
 
     Background: user / manager should be logged in
       Given the "user" is logged in

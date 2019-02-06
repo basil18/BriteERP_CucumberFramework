@@ -33,7 +33,6 @@ public class LoginStepDefs {
     @Then("the title should be Login | Website localhost")
     public void theTitleShouldBeLoginWebsiteLocalhost() {
         assertEquals("Login | Website localhost", Driver.getDriver().getTitle());
-
     }
 
     @Then("the database should be BriteErpDemo")
@@ -159,7 +158,6 @@ public class LoginStepDefs {
     @When("the user doesn't enter an email address")
     public void theUserDoesnTEnterAnEmailAddress() {
         // no code here, since no action needs to be taken
-
     }
 
     @And("the manager doesn't enter a password")
@@ -170,5 +168,9 @@ public class LoginStepDefs {
     @And("the user doesn't enter a password")
     public void theUserDoesnTEnterAPassword() {
         // no code here, since no action needs to be taken
+    }
+
+    @Then("the title should be {string}")
+    public void theTitleShouldBe(String arg0) {
     }
 }
