@@ -1,4 +1,4 @@
-@to-do @regression @rfq @brit-116
+@regression @rfq @brit-116
   Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
     within 'Purchases' page
 
@@ -25,5 +25,20 @@
        And the user should be on Requests for Quotation page
        And the title should be Requests for Quotation - Odoo
       Then the page should display the table
-       And the table should have
-      #TODO need to learn how to use multiple items
+       And the table should have the following rows
+            | Reference       |
+            | Order Date      |
+            | Vendor          |
+            | Scheduled Date  |
+            | Source Document |
+            | Untaxed         |
+            | Total           |
+            | Status          |
+
+    Scenario: BRIT-122: Verify that total untaxed and total (taxed) amounts are displayed
+      Given the "manager" is logged in
+       And the title should be Requests for Quotation - Odoo
+       And the user should be on Requests for Quotation page
+      Then the page should display the table
+       And the Untaxed total is displayed
+       And the Total is displayed

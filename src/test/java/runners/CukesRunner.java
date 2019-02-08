@@ -15,11 +15,12 @@ import org.junit.runner.RunWith;
         },
         tags = {
 //                {"@purchases", "@manager"},
-                "@smoke"
-//                "@to-do"
+//                "@smoke"
+                "@to-do"
                 },
         features = {"src/test/resources/features"},
         glue = {"step_definitions"}
+        , dryRun = true
 )
 
 public class CukesRunner {
