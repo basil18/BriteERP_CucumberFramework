@@ -28,9 +28,6 @@ public class PurchasesStepDefs {
                 (string.equals("manager") ? ConfigReader.getProperty("manager-password") :
                  ConfigReader.getProperty("user-password")) );
         sigInPage.loginButton.click();
-
-        entryPage = null;
-        sigInPage = null;
     }
 
     @When("the Purchases button is clicked")
@@ -38,8 +35,6 @@ public class PurchasesStepDefs {
         TopNavigationBar navPage = new TopNavigationBar();
 
         navPage.purchasesAnchor.click();
-
-        navPage = null;
     }
 
     @Then("the title should be Requests for Quotation - Odoo")
@@ -61,8 +56,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.purchaseOrdersAnchor.click();
-
-        page = null;
     }
 
     @Then("the title should be Purchase Orders - Odoo")
@@ -75,8 +68,6 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Purchase Orders - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 
     @Then("the user should be on Purchase Orders page")
@@ -87,8 +78,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                 "Purchase Orders",
                 10));
-
-        page = null;
     }
 
     @When("the Vendors button is clicked")
@@ -96,8 +85,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.vendorsAnchor.click();
-
-        page = null;
     }
 
     @Then("the user should be on Vendors page")
@@ -108,8 +95,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                         "Vendors",
                         10));
-
-        page = null;
     }
 
     @Then("the title should be Vendors - Odoo")
@@ -122,8 +107,6 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Vendors - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 
     @When("the Products button is clicked")
@@ -131,8 +114,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.productsAnchor.click();
-
-        page = null;
     }
 
     @Then("the user should be on Products page")
@@ -143,8 +124,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                         "Products",
                         10));
-
-        page = null;
     }
 
     @Then("the title should be Products - Odoo")
@@ -157,8 +136,6 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Products - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 
     @When("the Incoming Products button is clicked")
@@ -166,8 +143,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.incomingProductsAnchor.click();
-
-        page = null;
     }
 
     @Then("the user should be on Incoming Products page")
@@ -178,8 +153,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                         "Incoming Products",
                         10));
-
-        page = null;
     }
 
     @Then("the title should be Incoming Products - Odoo")
@@ -192,8 +165,6 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Incoming Products - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 
     @When("the Vendor Bills button is clicked")
@@ -201,8 +172,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.vendorBillsAnchor.click();
-
-        page = null;
     }
 
     @Then("the user should be on Vendor Bills page")
@@ -213,8 +182,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                         "Vendor Bills",
                         10));
-
-        page = null;
     }
 
     @Then("the title should be Vendor Bills - Odoo")
@@ -227,8 +194,6 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Vendor Bills - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 
     @When("the Reporting button is clicked")
@@ -236,8 +201,6 @@ public class PurchasesStepDefs {
         PurchasesPage page = new PurchasesPage();
 
         page.reportingAnchor.click();
-
-        page = null;
     }
 
     @Then("the user should be on Purchase Analysis page")
@@ -248,8 +211,6 @@ public class PurchasesStepDefs {
                 BrowserUtils.isElementsTextAMatch(page.activePageNameLabel,
                         "Purchase Analysis",
                         10));
-
-        page = null;
     }
 
     @Then("the title should be Purchase Analysis - Odoo")
@@ -262,7 +223,5 @@ public class PurchasesStepDefs {
 
         Assert.assertEquals("Purchase Analysis - Odoo",
                 Driver.getDriver().getTitle());
-
-        page = null;
     }
 }
