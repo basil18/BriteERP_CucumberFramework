@@ -42,3 +42,5 @@
       Then the page should display the table
        And the Untaxed total is displayed
        And the Total is displayed
+
+      
